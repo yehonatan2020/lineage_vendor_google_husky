@@ -232,21 +232,29 @@
   long_press_enable=1
 
 +/vsc/fusion_prox_voice_call
-  # Type of Fusion Algorithm used.
-  # 0: State machine driven by Optical and Ultrasound Prox events (default)
-  # 1: Optical Prox Passthrough
-  # 2: Ultrasound Prox Passthrough
-  algo=1
-  # On-change threshold for U/S Prox confidence value.
-  on_change_thresh_us_conf=0.1
-  # On-change threshold for U/S Prox mean power value.
-  on_change_thresh_us_mean=10
+  # 0: Normal (fusion of Optical Prox with other sensors)
+  # 1: Optical Prox Passthrough (skips all other fusion logic)
+  # 2: Optical Prox Overwrite (runs fusion logic but outputs Optical Prox state)
+  mode=1
 
-# Properties specific to Fusion Algo type 0.
-+/vsc/fusion_prox_voice_call/0
-  # Timeout when in Optical=0 but Ultrasound=1 state.
-  # Used to prevent false positives when near an object like a wall.
-  false_us_near_timeout_msec=1000
+  # Timeout when in Interactive and FalseFar state before switching to Near.
+  # Default: 1000ms
+  interactive_false_far_timeout_ms=1000
+
+  # Horizontal angle between device and earth to enter and exit Interactive
+  # state. Angles need to be less than 90 degrees, and exit >= enter.
+  # Defaults: 45 (enter) and 50 (exit)
+  interactive_thresh_angles=45 50
+
+  # Minimum horizontal angle between device and earth to qualify a valid
+  # To-Ear gesture. Should be larger than the interactive exit angle.
+  # Default: 60
+  to_ear_thresh_angle=60
+
+  # Change in horizontal angle between device and earth to trigger a From-Ear
+  # event. The initial angle to compare against is taken on a To-Ear event.
+  # Default: 30
+  from_ear_delta_thresh_angle=30
 
 # TBN.
 +/tbn

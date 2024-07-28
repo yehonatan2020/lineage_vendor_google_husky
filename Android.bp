@@ -145,19 +145,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "AICorePrebuilt",
-	owner: "google",
-	apk: "proprietary/product/priv-app/AICorePrebuilt/AICorePrebuilt.apk",
-	preprocessed: true,
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
 	name: "AppDirectedSMSService",
 	owner: "google",
 	apk: "proprietary/product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk",
@@ -233,32 +220,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore",
-	owner: "google",
-	apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore/DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore.apk",
-	preprocessed: true,
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "DevicePersonalizationPrebuiltPixel2023-v.U.14.playstore",
-	owner: "google",
-	apk: "proprietary/product/priv-app/DevicePersonalizationPrebuiltPixel2023-v.U.14.playstore/DevicePersonalizationPrebuiltPixel2023-v.U.14.playstore.apk",
-	preprocessed: true,
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
 	name: "DiagMon",
 	owner: "google",
 	apk: "proprietary/product/priv-app/DiagMon/DiagMon.apk",
@@ -287,19 +248,6 @@ android_app_import {
 	name: "HardwareInfo",
 	owner: "google",
 	apk: "proprietary/product/priv-app/HardwareInfo/HardwareInfo.apk",
-	preprocessed: true,
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "HealthIntelligenceStubPrebuilt",
-	owner: "google",
-	apk: "proprietary/product/priv-app/HealthIntelligenceStubPrebuilt/HealthIntelligenceStubPrebuilt.apk",
 	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
